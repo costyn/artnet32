@@ -1,0 +1,106 @@
+ *  Executing task: platformio run 
+
+Processing esp32-devkitc-ve (platform: espressif32; board: esp32dev; framework: arduino)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (6.5.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20014.231204 (2.0.14) 
+ - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 40 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Artnetesp32V2 @ 1.0.0+sha.311568c
+|-- I2SClocklessLedDriver @ 1.0.0+sha.0832b9f
+|-- FastLED @ 3.6.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/FastLED.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/bitswap.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/colorpalettes.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/colorutils.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/hsv2rgb.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/lib8tion.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/noise.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/platforms.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/platforms/esp/32/clockless_rmt_esp32.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/power_mgt.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/lib9ff/FastLED/wiring.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/src/artnetv2.cpp.o
+Building .pio/build/esp32-devkitc-ve/bootloader.bin
+Generating partitions .pio/build/esp32-devkitc-ve/partitions.bin
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+In file included from .pio/libdeps/esp32-devkitc-ve/I2SClocklessLedDriver/src/I2SClocklessLedDriver.h:33,
+                 from src/artnetv2.cpp:9:
+.pio/libdeps/esp32-devkitc-ve/I2SClocklessLedDriver/src/helper.h:2:29: warning: backslash-newline at end of file
+ #define HOW_LONG(name,func) \
+                              
+.pio/libdeps/esp32-devkitc-ve/I2SClocklessLedDriver/src/helper.h:6:66: warning: backslash and newline separated by space
+                         long __time2=ESP.getCycleCount()-__time1;\
+                                                                   
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFi.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiAP.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiClient.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiGeneric.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiMulti.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiSTA.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiScan.cpp.o
+In file included from src/artnetv2.cpp:12:
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.h: In function 'void _udp_task_subrarnet(void*)':
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.h:392:27: warning: pointer of type 'void *' used in arithmetic [-Wpointer-arith]
+             e->pb->payload+=ART_DMX_START;
+                           ^
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiServer.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libe87/WiFi/WiFiUdp.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libdd9/Artnetesp32V2/artnetESP32V2.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/libb89/SPI/SPI.cpp.o
+In file included from .pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.cpp:20:
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artpoll.h:130:26: warning: character constant too long for its type
+             char jj[12]={'ezerz'};
+                          ^~~~~~~
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.cpp:21: warning: "BUFFER_SIZE" redefined
+ #define BUFFER_SIZE 10
+ 
+In file included from .pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.cpp:2:
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.h:36: note: this is the location of the previous definition
+ #define BUFFER_SIZE 512
+ 
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/Esp.cpp.o
+Archiving .pio/build/esp32-devkitc-ve/libe87/libWiFi.a
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/FirmwareMSC.cpp.o
+Indexing .pio/build/esp32-devkitc-ve/libe87/libWiFi.a
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/FunctionalInterrupt.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/HWCDC.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/HardwareSerial.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/IPAddress.cpp.o
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/IPv6Address.cpp.o
+In file included from .pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.cpp:2:
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.h: In function 'void _udp_task_subrarnet(void*)':
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.h:392:27: warning: pointer of type 'void *' used in arithmetic [-Wpointer-arith]
+             e->pb->payload+=ART_DMX_START;
+                           ^
+Compiling .pio/build/esp32-devkitc-ve/FrameworkArduino/MD5Builder.cpp.o
+In file included from .pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artnetESP32V2.cpp:20:
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artpoll.h: In function 'void poll_reply(udp_pcb*, const ip_addr_t*)':
+.pio/libdeps/esp32-devkitc-ve/Artnetesp32V2/src/artpoll.h:130:33: error: narrowing conversion of '2053468794' from 'int' to 'char' inside { } [-Wnarrowing]
+             char jj[12]={'ezerz'};
+                                 ^
+*** [.pio/build/esp32-devkitc-ve/libdd9/Artnetesp32V2/artnetESP32V2.cpp.o] Error 1
+===================================================================== [FAILED] Took 7.57 seconds =====================================================================
+
+Environment       Status    Duration
+----------------  --------  ------------
+esp32-devkitc-ve  FAILED    00:00:07.570
+================================================================ 1 failed, 0 succeeded in 00:00:07.570 ================================================================
+
+ *  The terminal process "platformio 'run'" terminated with exit code: 1. 
+ *  Terminal will be reused by tasks, press any key to close it. 
